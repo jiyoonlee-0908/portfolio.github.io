@@ -1,146 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lockus 집중력 관리 앱</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이지윤 | Portfolio</title>
 
-  <!-- 부트스트랩 CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <!-- 커스텀 CSS -->
-  <link rel="stylesheet" href="css/custom.css" />
-</head>
-<body>
-  <nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Lockus</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navbarCollapse" class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav mb-2 mb-md-0 gap-2">
-          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- 글꼴 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-    </div>
+    <!-- 부트스트랩·아이콘·AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- particles.js CDN (타이핑·AOS 아래 어디든 OK) -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1950&q=80" class="d-block w-100" alt="intro" />
-        <div class="carousel-overlay"></div>
-        <div class="container h-100 d-flex align-items-center">
-          <div class="carousel-caption text-start">
-            <h1 class="display-4 fw-bold">D-Day까지 완벽 집중</h1>
-            <p class="lead">Lockus는 방해 앱 차단·Pomodoro 타이머·목표 관리까지 한 번에 제공합니다.</p>
-            <p><a class="btn btn-lg btn-accent" href="#features">주요 기능 살펴보기</a></p>
-          </div>
+
+    <!-- 내 CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
+    <!-- 네비게이션 -->
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#hero">이지윤</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarResponsive" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Summary</a></li>
+            <li class="nav-item"><a class="nav-link" href="#motivation">Motivation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <div class="carousel-item">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80" class="d-block w-100" alt="timer" />
-        <div class="carousel-overlay"></div>
-        <div class="container h-100 d-flex align-items-center justify-content-end">
-          <div class="carousel-caption">
-            <h1 class="display-5 fw-bold">Pomodoro 집중 세션</h1>
-            <p class="lead">25분 집중 + 5분 휴식을 반복하여 최고의 효율로 공부하세요.</p>
-            <p><a class="btn btn-lg btn-deepgreen" href="#features">Timer 기능</a></p>
+    <!-- Hero -->
+    <header id="hero">
+     <!-- ★ 파티클 배경용 캔버스 -->
+     <div id="particles-js"></div>
+
+      <!-- 기존 내용 그대로 ↓ -->
+     <h1 data-aos="fade-up" data-aos-delay="100">안녕하세요!</h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        35세, 성공적인 스타트업 창업을 꿈꾸는 이지윤입니다.
+       </p>
+       <a class="btn btn-primary rounded-pill" data-aos="zoom-in" data-aos-delay="300" href="#about">더 알아보기</a>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">About&nbsp;Me</h2>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+            <!-- 내 사진 (image0707.png) -->
+            <img src="image0707.png" alt="Lee Ji-yoon portrait" class="img-fluid rounded-3 shadow about-img">
           </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1950&q=80" class="d-block w-100" alt="lock mode" />
-        <div class="carousel-overlay"></div>
-        <div class="container h-100 d-flex align-items-center">
-          <div class="carousel-caption text-start">
-            <h1 class="display-5 fw-bold">Hard Lock 모드</h1>
-            <p class="lead">설정한 시간 동안 휴대폰을 강제 잠궈<br>집중을 지켜 드립니다.</p>
-            <p><a class="btn btn-lg btn-accent" href="#contact">문의하기</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-
-  <section id="about" class="py-5 bg-lightgray text-center">
-    <div class="container">
-      <h2 class="text-deepgreen mb-4">About Lockus</h2>
-      <p class="col-lg-8 mx-auto">
-        Lockus는 스마트폰 방해 요소를 차단하고 목표까지의 남은 시간을 시각화하여 <br class="d-none d-md-inline">완벽한 집중 환경을 만들어 주는 앱입니다.
-      </p>
-    </div>
-  </section>
-
-  <section id="features" class="py-5">
-    <div class="container">
-      <h2 class="text-center text-deepgreen mb-5">주요 기능</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow feature-card text-center p-3">
-            <div class="icon-box">📵</div>
-            <h5 class="mt-3 text-deepgreen">앱 차단 집중 모드</h5>
-            <p>카카오톡·SNS 등 방해 앱을<br>완전히 차단해 몰입을 유지합니다.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow feature-card text-center p-3">
-            <div class="icon-box">⏱️</div>
-            <h5 class="mt-3 text-deepgreen">Pomodoro 타이머</h5>
-            <p>25분 집중 / 5분 휴식을<br>자동으로 관리해 뇌 피로를 줄입니다.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow feature-card text-center p-3">
-            <div class="icon-box">📆</div>
-            <h5 class="mt-3 text-deepgreen">D‑Day 목표 관리</h5>
-            <p>남은 일수를 시각화하고<br>누적 집중 시간을 기록합니다.</p>
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="fw-bold mb-1">이지윤</h3>
+            <p class="mb-3">1991.09.08&nbsp;|&nbsp;인천 거주&nbsp;|&nbsp;두 아이의 엄마</p>
+            <p class="mb-4">
+              아이 둘을 키우며 지금까지 세상에 없던,<br>하지만 꼭 필요한 키즈 스마트 헬스 제품을 기획·제작했습니다.<br>
+              내년 예비창업패키지 신청을 준비하고 있으며, 기기와 앱과 웹 MVP를 직접 완성했습니다.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="py-5 bg-lightgray">
-    <div class="container">
-      <h2 class="text-center text-deepgreen mb-4">Contact</h2>
-      <form class="w-75 mx-auto">
-        <div class="mb-3">
-          <label class="form-label" for="name">이름</label>
-          <input id="name" type="text" class="form-control" placeholder="이름 입력" />
+    <!-- Project / Career Summary -->
+    <section id="projects" class="bg-dark">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">Project&nbsp;/&nbsp;Career&nbsp;Summary</h2>
+        <p class="lead text-center mb-5" data-aos="fade-up">
+          스마트 기기와 연동되는 앱과 웹 MVP를 직접 개발해왔으며, 정부 지원사업에도 꾸준히 관심을 가지고 있습니다.<br>
+          국가대표 출신 남편이 운영하는 스포츠 센터 (서울 강서구) 에서 함께 프로젝트를 시작했으며,<br>
+          관련 분야에 관심이나 역량이 있으신 분들과의 의미 있는 협업을 기대하고 있습니다.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="zoom-in">
+            <div class="card bg-secondary border-0 card-hover h-100 text-center p-4">
+              <i class="fa-solid fa-screwdriver-wrench fa-2x mb-3"></i>
+              <h5 class="card-title mb-2">Prototype&nbsp;Device</h5>
+              <p class="card-text small">아이 중심 스마트 헬스 기기 설계 및 제작</p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="150">
+            <div class="card bg-secondary border-0 card-hover h-100 text-center p-4">
+              <i class="fa-solid fa-laptop-code fa-2x mb-3"></i>
+              <h5 class="card-title mb-2">App&nbsp;&amp;&nbsp;Web&nbsp;MVP</h5>
+              <p class="card-text small">서비스 프로토콜 구축과 사용성 테스트 완료</p>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label class="form-label" for="email">이메일</label>
-          <input id="email" type="email" class="form-control" placeholder="이메일 주소" />
+      </div>
+    </section>
+
+    <!-- Motivation -->
+    <section id="motivation">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">Motivation</h2>
+        <p class="lead text-center" data-aos="fade-up">
+          다양한 관심사를 실험하며, 떠오르는 아이디어를 직접 앱으로 만들어 보고 싶었습니다. <br>
+          앱에 광고를 붙여 배포해 보는 경험이 이번 부트캠프 참여의 가장 큰 이유입니다. <br>
+          웹 개발은 물론 앱스토어와 플레이스토어에 실제로 앱을 출시해 보는 것이 목표입니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-dark">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">Contact</h2>
+        <p class="text-center mb-4" data-aos="fade-up">협업이나 문의가 있으시면 언제든 편하게 연락 주세요.</p>
+        <div class="d-flex justify-content-center gap-4 flex-wrap" data-aos="fade-up" data-aos-delay="150">
+          <a class="btn btn-outline-light rounded-pill" href="mailto:dayinj@naver.com">
+            <i class="fa-solid fa-envelope me-2"></i>dayinj@naver.com
+          </a>
+          <a class="btn btn-outline-light rounded-pill" href="https://github.com/jiyoonlee-0908/portfolio.github.io" target="_blank">
+            <i class="fa-brands fa-github me-2"></i>GitHub
+          </a>
         </div>
-        <button type="submit" class="btn btn-deepgreen w-100">제출하기</button>
-      </form>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <footer class="container py-4 border-top text-center">
-    <p class="float-end mb-0"><a href="#">Back to top</a></p>
-    <p class="mb-0 text-muted">© 2025 Lockus.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        © 2025&nbsp;Lee&nbsp;Ji-yoon. All rights reserved.
+      </div>
+    </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 800, easing: 'ease-out-quart' });
+        particlesJS('particles-js', {
+         particles: {
+          number: { value: 120, density: { enable: true, value_area: 800 } },
+          color: { value: '#ffffff' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.7, random: true },
+          size: { value: 2, random: true },
+           move: { enable: true, speed: 0.6 }
+         },
+         interactivity: { detect_on: 'canvas', events: { resize: true } },
+         retina_detect: true
+     });
+    </script>
+  </body>
 </html>

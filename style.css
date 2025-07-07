@@ -1,0 +1,141 @@
+:root {
+  --primary: #6f42c1;
+  --bg-dark: #090b10;
+  --text-light: #f8f9fa;
+}
+
+/* ===== Base ===== */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+.nav-link.active {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+.about-img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section p {
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+
+/* ===== About Section Text Style ===== */
+#about p {
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+
+/* 파티클 캔버스 Hero 전면 배치 */
+#hero { position: relative; overflow: hidden; }   /* 이미 relative면 overflow만 넣어도 됨 */
+#particles-js {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+/* 파티클 흐리게 만들기 */
+#particles-js canvas {
+  filter: blur(1px);
+  opacity: 0.5;
+}
+
+/* ===== Hero ===== */
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at 20% 30%, #372775 0%, #090b10 60%);
+  color: var(--text-light);
+}
+#hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#hero p {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+#hero .btn-primary {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 5rem 0;
+}
+.section-title {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* ===== Card Hover & Colors ===== */
+.card-hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.55);
+}
+
+/* Lighten card background & text for contrast */
+.card.bg-secondary {
+  background-color: #2f3442 !important; /* brighter than bg-dark */
+  color: var(--text-light);
+}
+.card-title,
+.card-text {
+  color: var(--text-light);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #000;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ===== Utilities ===== */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  #hero p {
+    font-size: 1.05rem;
+  }
+  section {
+    padding: 3.5rem 0;
+  }
+}
